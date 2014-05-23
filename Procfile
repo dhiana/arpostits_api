@@ -1,0 +1,1 @@
+web: gunicorn postits.wsgi
