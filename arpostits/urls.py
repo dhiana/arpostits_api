@@ -6,9 +6,11 @@ admin.autodiscover()
 from tastypie.api import Api
 
 from projects.api import ProjectResource
+from items.api import ItemResource
 
 v1_api = Api(api_name='v1')
 v1_api.register(ProjectResource())
+v1_api.register(ItemResource())
 
 urlpatterns = patterns('',
     # Examples:
