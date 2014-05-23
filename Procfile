@@ -1,1 +1,1 @@
-web: gunicorn postits.wsgi
+web: gunicorn postits/postits.wsgi
