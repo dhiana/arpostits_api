@@ -40,6 +40,7 @@ INSTALLED_APPS = (
 
 THIRD_PARTY_APPS = (
     'tastypie',
+    'south',
 )
 
 PROJECT_APPS = (
