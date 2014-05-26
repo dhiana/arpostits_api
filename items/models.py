@@ -8,3 +8,6 @@ class Item(models.Model):
     
     def __unicode__(self):
         return '%i - %s' % (self.id, self.title)
+
+    class Meta:
+        ordering = ['id']

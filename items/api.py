@@ -8,4 +8,3 @@ class ItemResource(ModelResource):
         queryset = Item.objects.all()
         # Very insecure
         authorization = Authorization()
-        ordering = ['id']
