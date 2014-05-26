@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import MaxValueValidator
 
 class Item(models.Model):
+    marker = models.PositiveSmallIntegerField(null=True, blank=True)
     title = models.CharField(max_length=500)
     project = models.ForeignKey('projects.Project')
     progress = models.PositiveSmallIntegerField(default=0, validators=[MaxValueValidator(100)])
@@ -13,3 +14,4 @@ class Item(models.Model):
 
     class Meta:
         ordering = ['id']
+        unique_together = ('marker', 'project')
