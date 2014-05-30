@@ -46,6 +46,7 @@ THIRD_PARTY_APPS = (
 PROJECT_APPS = (
     'projects',
     'items',
+    'tasks',
 )
 
 INSTALLED_APPS += THIRD_PARTY_APPS + PROJECT_APPS
