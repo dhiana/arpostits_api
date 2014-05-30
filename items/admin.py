@@ -1,8 +1,12 @@
 from django.contrib import admin
 from .models import Item
+from tasks.models import Task
+
+class TaskInline(admin.TabularInline):
+    model = Task
 
 class ItemAdmin(admin.ModelAdmin):
-    pass
+    inlines = [TaskInline,]
     list_display = ['title', 'marker', 'progress', 'ready', 'blocked']
     list_editable = ['marker', 'progress', 'ready', 'blocked']
 
