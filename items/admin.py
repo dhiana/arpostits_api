@@ -9,5 +9,6 @@ class ItemAdmin(admin.ModelAdmin):
     inlines = [TaskInline,]
     list_display = ['title', 'project', 'marker', 'progress', 'ready', 'blocked']
     list_editable = ['marker', 'progress', 'ready', 'blocked']
+    list_filter = ['project',]
 
 admin.site.register(Item, ItemAdmin)
